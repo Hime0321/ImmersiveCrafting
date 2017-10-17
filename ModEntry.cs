@@ -7,7 +7,11 @@ using StardewValley;
 
 namespace ImmersiveCrafting
 {
-    public class ModEntry
+    public class ModEntry : Mod
     {
+        public override void Entry(IModHelper helper)
+        {
+            ControlEvents.KeyPressed += this.ControlEvents_KeyPress;
+        }
     }
 }

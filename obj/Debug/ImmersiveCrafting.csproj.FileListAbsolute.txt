@@ -1,0 +1,6 @@
+C:\Users\Andrew\Documents\GitHub\SDVMod\bin\Debug\ImmersiveCrafting.dll
+C:\Users\Andrew\Documents\GitHub\SDVMod\bin\Debug\ImmersiveCrafting.pdb
+C:\Users\Andrew\Documents\GitHub\SDVMod\obj\Debug\ImmersiveCrafting.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\Documents\GitHub\SDVMod\obj\Debug\ImmersiveCrafting.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\Documents\GitHub\SDVMod\obj\Debug\ImmersiveCrafting.dll
+C:\Users\Andrew\Documents\GitHub\SDVMod\obj\Debug\ImmersiveCrafting.pdb

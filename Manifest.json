@@ -5,5 +5,5 @@
    "Description": "Adds more depth to crafting",
    "UniqueID": "Hime&Dawn.ImmersiveCrafting",
    "EntryDll": "ImmersiveCrafting.dll",
-   "UpdateKeys": []
+   "UpdateKeys": ["GitHub:Hime0321/ImmersiveCrafting"]
 }

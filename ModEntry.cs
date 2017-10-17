@@ -9,6 +9,5 @@ namespace ImmersiveCrafting
 {
     public class ModEntry
     {
-        ///Penis
     }
 }

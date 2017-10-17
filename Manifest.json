@@ -1,9 +1,9 @@
 ﻿{
    "Name": "Immersive Crafting",
-   "Author": "Hime0321, Dawnslaad, H-ng-r",
+   "Author": "Hime0321, Dawnslaad",
    "Version": "1.0",
    "Description": "Adds more depth to crafting",
-   "UniqueID": "Hime,Dawn&H-ng-r.ImmersiveCrafting",
+   "UniqueID": "Hime&Dawn.ImmersiveCrafting",
    "EntryDll": "ImmersiveCrafting.dll",
    "UpdateKeys": []
 }

@@ -7,7 +7,19 @@ using StardewValley;
 
 namespace ImmersiveCrafting
 {
-    public class ModEntry
+    public class ModEntry : Mod
     {
+        public override void Entry(IModHelper helper)
+        {
+            ControlEvents.KeyPressed += this.ControlEvents_KeyPress;
+        }
+
+        private void ControlEvents_KeyPress(object sender, EventArgsKeyPressed e)
+        {
+            if (Context.IsWorldReady) // save is loaded
+            {
+                this.Monitor.Log($"{Game1.player.name} pressed {e.KeyPressed}.");
+            }
+        }
     }
 }

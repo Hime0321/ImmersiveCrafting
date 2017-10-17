@@ -1,9 +1,9 @@
 ﻿{
    "Name": "Immersive Crafting",
-   "Author": "Hime0321, Dawnslaad",
-   "Version": "0.0.0",
+   "Author": "Hime0321 and Dawnslaad",
+   "Version": "1.0.0",
    "Description": "Adds more depth to crafting",
    "UniqueID": "Hime&Dawn.ImmersiveCrafting",
    "EntryDll": "ImmersiveCrafting.dll",
-   "UpdateKeys": "GitHub:Hime0321/ImmersiveCrafting"
+   "UpdateKeys": [ "GitHub:Hime0321/ImmersiveCrafting" ]
 }

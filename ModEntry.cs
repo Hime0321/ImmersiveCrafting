@@ -16,7 +16,7 @@ namespace ImmersiveCrafting
 
         private void ControlEvents_KeyPress(object sender, EventArgsKeyPressed e)
         {
-            if (Context.IsWorldReady) // save is loaded
+            if (Context.IsWorldReady)
             {
                 this.Monitor.Log($"{Game1.player.name} pressed {e.KeyPressed}.");
             }

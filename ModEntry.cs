@@ -9,6 +9,10 @@ namespace ImmersiveCrafting
 {
     public class ModEntry : Mod
     {
+        public override void Entry(IModHelper helper)
+        {
+        }
+
         public bool CanEdit<T>(IAssetInfo asset)
         {
             return asset.AssetNameEquals(@"Data\Crops");

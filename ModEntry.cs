@@ -7,7 +7,7 @@ using StardewValley;
 
 namespace ImmersiveCrafting
 {
-    public class ModEntry : IAssetEditor
+    public class ModEntry : Mod, IAssetEditor
     {
         public bool CanEdit<T>(IAssetInfo asset)
         {

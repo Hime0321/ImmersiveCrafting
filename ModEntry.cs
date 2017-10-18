@@ -28,3 +28,15 @@ namespace ImmersiveCrafting
         }
     }
 }
+
+public override void Entry(IModHelper helper) => ControlEvents.KeyPressed += this.ControlEvents_KeyPress;
+
+private void ControlEvents_KeyPress(EventArgsKeyPressed e, object sender)
+{
+            if (Context.IsWorldReady)
+            {
+                this.Monitor.Log($"{Game1.player.name} pressed {e.KeyPressed}.");
+            }
+        }
+    }
+}

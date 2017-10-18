@@ -7,36 +7,23 @@ using StardewValley;
 
 namespace ImmersiveCrafting
 {
-    public class ModEntry : Mod, IAssetEditor
+    public class ModEntry : IAssetEditor
     {
         public bool CanEdit<T>(IAssetInfo asset)
         {
             return asset.AssetNameEquals(@"Data\Crops");
         }
 
-        
+        /// <summary>Edit a matched asset.</summary>
+        /// <param name="asset">A helper which encapsulates metadata about an asset and enables changes to it.</param>
         public void Edit<T>(IAssetData asset)
         {
-            asset
-                .AsDictionary<int, string>()
-                .Set((id, data) =>
-                {
-                    string[] fields = data.Split('/');
-                    fields[1] = "spring summer fall winter";
-                    return string.Join("/", fields);
-                });
-        }
-    
-    public override void Entry(IModHelper helper)
-        {
-            ControlEvents.KeyPressed += this.ControlEvents_KeyPress;
-        }
-
-        private void ControlEvents_KeyPress(object sender, EventArgsKeyPressed e)
-        {
-            if (Context.IsWorldReady)
+            // add crop data
+            if (asset.AssetNameEquals(@"Data\ObjectInformation")) ;
             {
-                this.Monitor.Log($"{Game1.player.name} pressed {e.KeyPressed}.");
+                asset
+                    .AsDictionary<int, string>()
+                    .Set(1000, "Weeds/0/-1/Basic/Weeds/A bunch of obnoxious weeds.");
             }
         }
     }

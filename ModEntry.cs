@@ -7,9 +7,27 @@ using StardewValley;
 
 namespace ImmersiveCrafting
 {
-    public class ModEntry : Mod
+    public class ModEntry : Mod, IAssetEditor
     {
-        public override void Entry(IModHelper helper)
+        public bool CanEdit<T>(IAssetInfo asset)
+        {
+            return asset.AssetNameEquals(@"Data\Crops");
+        }
+
+        
+        public void Edit<T>(IAssetData asset)
+        {
+            asset
+                .AsDictionary<int, string>()
+                .Set((id, data) =>
+                {
+                    string[] fields = data.Split('/');
+                    fields[1] = "spring summer fall winter";
+                    return string.Join("/", fields);
+                });
+        }
+    
+    public override void Entry(IModHelper helper)
         {
             ControlEvents.KeyPressed += this.ControlEvents_KeyPress;
         }

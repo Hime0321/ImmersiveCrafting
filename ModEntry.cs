@@ -7,7 +7,7 @@ using StardewValley;
 
 namespace ImmersiveCrafting
 {
-    public class ModEntry : Mod, IAssetEditor
+    public class ModEntry : Mod
     {
         public bool CanEdit<T>(IAssetInfo asset)
         {
@@ -27,12 +27,4 @@ namespace ImmersiveCrafting
             }
         }
     }
-}
-
-private void ControlEvents_KeyPress(EventArgsKeyPressed e, object sender)
-{
-            if (Context.IsWorldReady)
-            {
-                this.Monitor.Log($"{Game1.player.name} pressed {e.KeyPressed}.");
-            }
 }

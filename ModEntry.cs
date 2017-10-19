@@ -7,28 +7,23 @@ using StardewValley;
 
 namespace ImmersiveCrafting
 {
-    public class ModEntry : Mod
+    public class ModEntry : Mod, IAssetLoader
     {
         public override void Entry(IModHelper helper)
         {
         }
 
-        public bool CanEdit<T>(IAssetInfo asset)
+        public bool CanLoad<T>(IAssetInfo asset)
         {
-            return asset.AssetNameEquals(@"Data\Crops");
+            return asset.AssetNameEquals(@"Data\ObjectInformation");
         }
-
-        /// <summary>Edit a matched asset.</summary>
-        /// <param name="asset">A helper which encapsulates metadata about an asset and enables changes to it.</param>
-        public void Edit<T>(IAssetData asset)
+        
+        public void Load<T>(IAssetInfo asset)
         {
-            // add crop data
-            if (asset.AssetNameEquals(@"Data\ObjectInformation"));
+            return (T)(object)new Dictionary<Int32, string> // (T)(object) is a trick to cast anything to T if we know it's compatible
             {
-                asset
-                    .AsDictionary<int, string>()
-                    .Set(1000, "Weeds/0/-1/Basic/Weeds/A bunch of obnoxious weeds.");
-            }
+                ["800"] = "Wooden Plankes/2/69/Basic/Wooden Plankes/Used to build stuff."
+            };
         }
     }
 }
